@@ -1,0 +1,7 @@
+shop\productshopsession\data\DiskSer.class
+shop\productshopsession\service\SessionService.class
+shop\productshopsession\api\SessionController.class
+shop\productshopsession\data\Status.class
+shop\productshopsession\api\SessionController$1.class
+shop\productshopsession\data\Acquisto.class
+shop\productshopsession\ProductShopSessionApplication.class
