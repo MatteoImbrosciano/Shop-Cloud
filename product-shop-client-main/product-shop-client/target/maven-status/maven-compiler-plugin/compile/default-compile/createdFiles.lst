@@ -1,0 +1,9 @@
+shop\productshopclient\breaker\CircuitBreaker.class
+shop\productshopclient\breaker\Closed.class
+shop\productshopclient\breaker\OpenState.class
+shop\productshopclient\api\HttpSender.class
+shop\productshopclient\breaker\BreakerState.class
+shop\productshopclient\data\Client.class
+shop\productshopclient\breaker\HalfOpen.class
+shop\productshopclient\breaker\Open.class
+shop\productshopclient\ProductShopClientApplication.class
