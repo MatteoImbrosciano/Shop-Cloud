@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-shop-client
+  labels:
+    app: product-shop-client
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: product-shop-client
+  template:
+    metadata:
+      labels:
+        app: product-shop-client
+    spec:
+      containers:
+      - name: product-shop-client
+        image: matteo16/product-shop:client
+        stdin: true
+        tty: true
+        ports:
+        - containerPort: 10000

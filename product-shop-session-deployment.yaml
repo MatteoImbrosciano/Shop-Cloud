@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-shop-session
+  labels:
+    app: product-shop-session
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: product-shop-session
+  template:
+    metadata:
+      labels:
+        app: product-shop-session
+    spec:
+      containers:
+      - name: product-shop-session
+        image: matteo16/product-shop:session
+        ports:
+        - containerPort: 51235

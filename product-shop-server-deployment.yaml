@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-shop-server
+  labels:
+    app: product-shop-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: product-shop-server
+  template:
+    metadata:
+      labels:
+        app: product-shop-server
+    spec:
+      containers:
+      - name: product-shop-server
+        image: matteo16/product-shop:server
+        ports:
+        - containerPort: 51234
