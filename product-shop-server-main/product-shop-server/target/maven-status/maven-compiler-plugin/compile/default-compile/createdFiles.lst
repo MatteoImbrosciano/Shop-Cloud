@@ -1,0 +1,9 @@
+shop\productshopserver\service\ProdService.class
+shop\productshopserver\data\Acquisto.class
+shop\productshopserver\data\Product.class
+shop\productshopserver\http\HttpSender.class
+shop\productshopserver\session\Status.class
+shop\productshopserver\api\ProductController.class
+shop\productshopserver\http\HttpSender$1.class
+shop\productshopserver\data\ProductTable.class
+shop\productshopserver\ProductShopServerApplication.class
