@@ -9,6 +9,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest  # Usa un runner Ubuntu fornito da GitHub
 
+    env:
+      EC2_IP: 51.20.79.186
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v3  # Controlla il codice dal repository
@@ -18,10 +21,16 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.EC2_SSH_KEY }}  # Aggiungi la tua chiave SSH privata come secret
 
-    - name: Copy script to EC2
-      run: scp -o StrictHostKeyChecking=no ./scripts/deploy-to-ec2.sh ec2-user@13.60.86.121:/home/ec2-user/
+    - name: Copy script 1 to EC2
+      run: scp -o StrictHostKeyChecking=no ./scripts/deploy1.sh ec2-user@${{ env.EC2_IP }}:/home/ec2-user/
+
+    - name: Copy script 2 to EC2
+      run: scp -o StrictHostKeyChecking=no ./scripts/deploy2.sh ec2-user@${{ env.EC2_IP }}:/home/ec2-user/
       
 
-    - name: Deploy to EC2
-      run: ssh -o StrictHostKeyChecking=no ec2-user@13.60.86.121 'bash /home/ec2-user/deploy-to-ec2.sh'
+    - name: Deploy 1 to EC2
+      run: ssh -o StrictHostKeyChecking=no ec2-user@${{ env.EC2_IP }} 'bash /home/ec2-user/deploy1.sh'
+    
+    - name: Deploy 2 to EC2
+      run: ssh -o StrictHostKeyChecking=no ec2-user@${{ env.EC2_IP }} 'bash /home/ec2-user/deploy2.sh'
       
