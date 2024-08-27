@@ -4,7 +4,7 @@
 sudo yum install git -y
 
 # Clone the repository
-git clone https://github.com/matteo16/https://github.com/MatteoImbrosciano/Shop-Cloud
+git clone https://github.com/MatteoImbrosciano/Shop-Cloud
 
 # Install Docker
 sudo yum install docker -y
