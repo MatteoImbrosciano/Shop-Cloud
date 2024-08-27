@@ -1,0 +1,25 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - main  # Modifica con il nome del branch che desideri monitorare
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # Usa un runner Ubuntu fornito da GitHub
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3  # Controlla il codice dal repository
+
+    - name: Set up SSH
+      uses: webfactory/ssh-agent@v0.5.3  # Configura l'agente SSH
+      with:
+        ssh-private-key: ${{ secrets.EC2_SSH_KEY }}  # Aggiungi la tua chiave SSH privata come secret
+
+    - name: Deploy to EC2
+      run: |
+        ssh -o StrictHostKeyChecking=no ec2-user@<YOUR_EC2_PUBLIC_IP> 'bash -s' < ./deploy-to-ec2.sh
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}  # Passa la chiave SSH come variabile d'ambiente
