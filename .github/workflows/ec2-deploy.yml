@@ -18,8 +18,10 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.EC2_SSH_KEY }}  # Aggiungi la tua chiave SSH privata come secret
 
+    - name: Copy script to EC2
+      run: scp -o StrictHostKeyChecking=no ./scripts/deploy-to-ec2.sh ec2-user@13.60.86.121:/home/ec2-user/
+      
+
     - name: Deploy to EC2
-      run: |
-        ssh -o StrictHostKeyChecking=no ec2-user@16.171.235.232 'bash -s' < ./deploy-to-ec2.sh
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}  # Passa la chiave SSH come variabile d'ambiente
+      run: ssh -o StrictHostKeyChecking=no ec2-user@13.60.86.121 'bash /home/ec2-user/deploy-to-ec2.sh'
+      
