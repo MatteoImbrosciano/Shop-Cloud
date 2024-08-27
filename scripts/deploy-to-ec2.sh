@@ -6,9 +6,6 @@ sudo yum install git -y
 # Clone the repository
 git clone https://github.com/MatteoImbrosciano/Shop-Cloud.git
 
-# Move into the cloned repository directory
-cd Shop-Cloud
-
 # Install Docker
 sudo yum install docker -y
 sudo systemctl start docker
@@ -33,9 +30,9 @@ chmod +x kubectl
 sudo mv kubectl /usr/local/bin/
 
 # Apply Kubernetes configurations
-kubectl apply -f Progetto_cloud/Shop-Cloud/product-shop-client-deployment.yaml
-kubectl apply -f Progetto_cloud/Shop-Cloud/product-shop-server-deployment.yaml
-kubectl apply -f Progetto_cloud/Shop-Cloud/product-shop-session-deployment.yaml
-kubectl apply -f Progetto_cloud/Shop-Cloud/product-shop-client-service.yaml
-kubectl apply -f Progetto_cloud/Shop-Cloud/product-shop-server-service.yaml
-kubectl apply -f Progetto_cloud/Shop-Cloud/product-shop-session-service.yaml
+kubectl apply -f Shop-Cloud/product-shop-client-deployment.yaml
+kubectl apply -f Shop-Cloud/product-shop-server-deployment.yaml
+kubectl apply -f Shop-Cloud/product-shop-session-deployment.yaml
+kubectl apply -f Shop-Cloud/product-shop-client-service.yaml
+kubectl apply -f Shop-Cloud/product-shop-server-service.yaml
+kubectl apply -f Shop-Cloud/product-shop-session-service.yaml
