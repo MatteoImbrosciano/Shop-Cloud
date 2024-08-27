@@ -20,6 +20,6 @@ jobs:
 
     - name: Deploy to EC2
       run: |
-        ssh -o StrictHostKeyChecking=no ec2-user@<YOUR_EC2_PUBLIC_IP> 'bash -s' < ./deploy-to-ec2.sh
+        ssh -o StrictHostKeyChecking=no ec2-user@16.171.235.232 'bash -s' < ./deploy-to-ec2.sh
       env:
         SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}  # Passa la chiave SSH come variabile d'ambiente
