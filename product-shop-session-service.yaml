@@ -8,3 +8,4 @@ spec:
     targetPort: 51235
   selector:
     app: product-shop-session
+    

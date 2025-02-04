@@ -39,3 +39,4 @@ jobs:
         docker build -t product-shop-session ./product-shop-session
         docker tag product-shop-session ${{ secrets.DOCKER_USERNAME }}/product-shop:session
         docker push ${{ secrets.DOCKER_USERNAME }}/product-shop:session
+        

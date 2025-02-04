@@ -21,3 +21,4 @@ spec:
         tty: true
         ports:
         - containerPort: 10000
+        

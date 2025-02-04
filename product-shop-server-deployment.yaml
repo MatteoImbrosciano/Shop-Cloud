@@ -5,7 +5,7 @@ metadata:
   labels:
     app: product-shop-server
 spec:
-  replicas: 1
+  replicas: 1  #il numero di server che girano (potrei anche avere 2 server di cui uno farà da recovery)
   selector:
     matchLabels:
       app: product-shop-server
@@ -14,7 +14,7 @@ spec:
       labels:
         app: product-shop-server
     spec:
-      containers:
+      containers:  #dico in quale containers prendo l'immagine
       - name: product-shop-server
         image: matteo16/product-shop:server
         ports:

@@ -19,3 +19,4 @@ spec:
         image: matteo16/product-shop:session
         ports:
         - containerPort: 51235
+        

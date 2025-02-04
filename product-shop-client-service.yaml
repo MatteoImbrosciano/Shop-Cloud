@@ -8,3 +8,4 @@ spec:
     targetPort: 10000
   selector:
     app: product-shop-client
+    
