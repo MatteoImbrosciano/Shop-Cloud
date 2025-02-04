@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest  # Usa un runner Ubuntu fornito da GitHub
 
     env:
-      EC2_IP: 16.171.116.173
+      EC2_IP: 13.49.246.15
 
     steps:
     - name: Checkout code
