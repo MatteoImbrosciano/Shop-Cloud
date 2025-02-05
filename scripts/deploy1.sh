@@ -19,6 +19,7 @@ sudo usermod -aG docker ec2-user
 newgrp docker
 
 # Pull Docker images
+docker pull matteo16/product-shop
 docker pull matteo16/product-shop:client
 docker pull matteo16/product-shop:server
 docker pull matteo16/product-shop:session
