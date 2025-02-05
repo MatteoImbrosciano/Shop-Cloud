@@ -8,7 +8,7 @@ git clone https://github.com/MatteoImbrosciano/Shop-Cloud
 
 #Aggiorno il codice
 current_dir=$(pwd)
-cd /home/ec2-user/Shop-Cloud
+cd /home/ec2-user/Shop-cloud
 git pull 
 cd "$current_dir"
 
