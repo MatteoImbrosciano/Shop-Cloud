@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest  # Usa un runner Ubuntu fornito da GitHub
 
     env:
-
       EC2_IP: 16.171.225.194
 
     steps:
