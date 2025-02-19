@@ -11,7 +11,7 @@ jobs:
 
     env:
 
-      EC2_IP: 16.170.227.133
+      EC2_IP: 13.60.73.173
 
     steps:
     - name: Checkout code
